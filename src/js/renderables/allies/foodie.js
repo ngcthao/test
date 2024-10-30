@@ -1,6 +1,6 @@
 import * as me from 'melonjs';
 import AllyEntity from './ally.js';
-import HitBoxEntity from './hitbox.js';
+// import HitBoxEntity from './hitbox.js';
 
 class FoodieEntity extends AllyEntity {
 
@@ -10,8 +10,8 @@ class FoodieEntity extends AllyEntity {
 
         // set default stats of foodie unit
         this.updateAllyStats()
-        this.hitbox = new HitBoxEntity(x, y, this.allyRange);
-        me.game.world.addChild(this.hitbox);
+        // this.hitbox = new HitBoxEntity(x, y, this.allyRange);
+        // me.game.world.addChild(this.hitbox);
     }
 
     getAllyStats() {
@@ -52,7 +52,7 @@ class FoodieEntity extends AllyEntity {
         if (this.tier < 3) {
             this.tier++
             this.updateAllyStats()
-            this.hitbox.updateHitbox(this.allyRange)
+            // this.hitbox.updateHitbox(this.allyRange)
         }
     }
 };
