@@ -1,6 +1,6 @@
 import * as me from 'melonjs';
 import AllyEntity from './ally.js';
-import HitBoxEntity from './hitbox.js';
+// import HitBoxEntity from './hitbox.js';
 
 class ChildEntity extends AllyEntity {
 
@@ -10,8 +10,8 @@ class ChildEntity extends AllyEntity {
 
         // set default stats of child unit
         this.updateAllyStats()
-        this.hitbox = new HitBoxEntity(x, y, this.allyRange);
-        me.game.world.addChild(this.hitbox);
+        // this.hitbox = new HitBoxEntity(x, y, this.allyRange);
+        // me.game.world.addChild(this.hitbox);
     }
 
     getAllyStats() {
@@ -38,7 +38,6 @@ class ChildEntity extends AllyEntity {
             this.allyATK = 10;
             this.allyASPD = 2.5;
             this.allyRange = 1.1;
-            this.hitbox.updateHitBox()
         }
         else if (this.tier == 3) {
             this.allyCost = 100;
@@ -53,7 +52,7 @@ class ChildEntity extends AllyEntity {
         if (this.tier < 3) {
             this.tier++
             this.updateAllyStats()
-            this.hitbox.updateHitbox(this.allyRange)
+            // this.hitbox.updateHitbox(this.allyRange)
         }
     }
 };

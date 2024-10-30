@@ -1,6 +1,6 @@
 import * as me from 'melonjs';
 import applicationState from '../../applicationState.js';
-import HitBoxEntity from './hitbox.js';
+// import HitBoxEntity from './hitbox.js';
 
 class AllyEntity extends me.Entity {
 
@@ -13,7 +13,7 @@ class AllyEntity extends me.Entity {
         this.body.ignoreGravity = true;
         
         // set hitbox
-        this.hitbox = null;
+        // this.hitbox = null;
 
         // set default stats of ally unit
         this.tier = 1;
